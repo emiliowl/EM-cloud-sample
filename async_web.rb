@@ -22,7 +22,9 @@ class HelloApp < Sinatra::Base
   # response from the web-service.
   get '/delayed-hello' do
     EM.defer do
+      puts "I'll execute a very heavy task here!"
       sleep 5
+      puts "OK. Task is done!"
     end
     'I\'m doing work in the background, but I am still free to take requests'
   end
@@ -64,6 +66,5 @@ def run(opts)
   end
   
 end
-  
 # start the application
 run app: HelloApp.new
