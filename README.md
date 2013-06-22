@@ -1,4 +1,4 @@
 EM-cloud-sample
 ===============
 
-Sample of event machine app deployed at the heroku cloud.
+Sample of sinatra app deployed at the heroku cloud.
