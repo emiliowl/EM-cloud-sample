@@ -16,7 +16,7 @@ require 'sinatra'
       j = 2
       while (i < 99999999999999999)
        i += i
-       while (j < 99999999)
+       while (j < 999999999)
          j += i
        end
       end 
