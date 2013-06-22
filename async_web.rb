@@ -12,7 +12,14 @@ require 'sinatra'
   get '/delayed-hello' do 
       beginn = Time.now
       puts "I'll execute a very heavy task here!"
-      sleep 5
+      i = 2
+      j = 2
+      while (i < 99999999999999999)
+       i += i
+       while (j < 99999999)
+         j += i
+       end
+      end 
       puts "OK. Task is done!"          
       endd = Time.now
       "Request received at: #{beginn}. Response send at: #{endd}. Time elapsed: #{(endd-beginn).to_s} seconds"
